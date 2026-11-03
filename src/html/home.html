@@ -7,6 +7,7 @@
     <title>Consumo Consciente</title>
 
     <link rel="stylesheet" href="../css/home.css">
+    <script src="../js/home.js" defer></script>
 </head>
 
 <body>
@@ -22,7 +23,24 @@
 
             <nav class="menu">
                 <a href="home.html" class="active">Início</a>
-                <a href="#setores">Setores</a>
+
+                <div class="dropdown">
+                    <button class="dropdown-toggle" type="button" aria-expanded="false">
+                        Setores <span class="dropdown-arrow">▾</span>
+                    </button>
+
+                    <div class="dropdown-menu">
+                        <a href="energia.html">⚡ Energia</a>
+                        <a href="agropecuaria.html">◈ Agropecuária</a>
+                        <a href="moda-textil.html">♟ Moda e têxtil</a>
+                        <a href="alimentos.html">♨ Alimentos</a>
+                        <a href="transporte.html">🚍 Transporte</a>
+                        <a href="mineracao.html">◆ Mineração</a>
+                        <a href="construcao-civil.html">⌂ Construção Civil</a>
+                        <a href="tecnologia.html">▣ Tecnologia</a>
+                    </div>
+                </div>
+
                 <a href="pegada-ecologica.html">
                     Pegada ecológica
                 </a>
@@ -81,9 +99,9 @@
                     <h2>Explore por setor</h2>
                 </div>
 
-                <a href="impactos.html" class="impact-button">
-                    ◉ &nbsp; Clique para ver os impactos!
-                </a>
+                <span class="impact-button">
+                    ◉ &nbsp; Clique nos cards para ver os impactos!
+                </span>
 
             </div>
 
@@ -170,7 +188,7 @@
                 </a>
 
 
-                <!-- minecraft -->
+                <!-- mineracao -->
                 <a href="mineracao.html"
                    class="sector-card mining">
 

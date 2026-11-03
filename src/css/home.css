@@ -99,6 +99,80 @@ a {
     border-bottom: 2px solid #075b2c;
 }
 
+/* dropdown de setores */
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown-toggle {
+    background: none;
+    border: none;
+    cursor: pointer;
+
+    font-family: inherit;
+    font-size: 15px;
+    font-weight: 500;
+    color: #666666;
+
+    padding: 6px 0;
+    transition: 0.3s;
+}
+
+.dropdown-toggle:hover,
+.dropdown.open .dropdown-toggle {
+    color: #075b2c;
+}
+
+.dropdown-arrow {
+    display: inline-block;
+    font-size: 12px;
+    transition: transform 0.25s;
+}
+
+.dropdown.open .dropdown-arrow {
+    transform: rotate(180deg);
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: calc(100% + 14px);
+    left: 50%;
+    transform: translateX(-50%) translateY(-6px);
+
+    min-width: 230px;
+    padding: 8px;
+
+    display: flex;
+    flex-direction: column;
+
+    background-color: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.25s;
+    z-index: 20;
+}
+
+.dropdown.open .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-50%) translateY(0);
+}
+
+.menu .dropdown-menu a {
+    padding: 10px 14px;
+    border-radius: 10px;
+    font-size: 14px;
+    white-space: nowrap;
+}
+
+.menu .dropdown-menu a:hover {
+    background-color: #edf5ed;
+    color: #075b2c;
+}
 
 /* banner principal hero */
 
