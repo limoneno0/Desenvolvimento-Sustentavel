@@ -60,6 +60,58 @@
             <rect width="6" height="10" x="16" y="12" rx="2" />
         </symbol>
 
+        <symbol id="icon-brota" viewBox="0 0 24 24">
+            <path d="M14 9.536V7a4 4 0 0 1 4-4h1.5a.5.5 0 0 1 .5.5V5a4 4 0 0 1-4 4 4 4 0 0 0-4 4c0 2 1 3 1 5a5 5 0 0 1-1 3" />
+            <path d="M4 9a5 5 0 0 1 8 4 5 5 0 0 1-8-4" />
+            <path d="M5 21h14" />
+        </symbol>
+
+        <symbol id="icon-clique" viewBox="0 0 24 24">
+            <path d="M14 4.1 12 6" />
+            <path d="m5.1 8-2.9-.8" />
+            <path d="m6 12-1.9 2" />
+            <path d="M7.2 2.2 8 5.1" />
+            <path d="M9.037 9.69a.498.498 0 0 1 .653-.653l11 4.5a.5.5 0 0 1-.074.949l-4.349 1.041a1 1 0 0 0-.74.739l-1.04 4.35a.5.5 0 0 1-.95.074z" />
+        </symbol>
+
+        <symbol id="icon-chat" viewBox="0 0 24 24">
+            <path d="M2.992 16.342a2 2 0 0 1 .094 1.167l-1.065 3.29a1 1 0 0 0 1.236 1.168l3.413-.998a2 2 0 0 1 1.099.092 10 10 0 1 0-4.777-4.719" />
+            <path d="M8 12h.01" />
+            <path d="M12 12h.01" />
+            <path d="M16 12h.01" />
+        </symbol>
+
+        <symbol id="icon-estrela" viewBox="0 0 24 24">
+            <path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z" />
+        </symbol>
+
+        <symbol id="icon-pessoas" viewBox="0 0 24 24">
+            <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
+            <path d="M16 3.128a4 4 0 0 1 0 7.744" />
+            <path d="M22 21v-2a4 4 0 0 0-3-3.87" />
+            <circle cx="9" cy="7" r="4" />
+        </symbol>
+
+        <symbol id="icon-escudo" viewBox="0 0 24 24">
+            <path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z" />
+            <path d="m9 12 2 2 4-4" />
+        </symbol>
+
+        <symbol id="icon-seta-baixo" viewBox="0 0 24 24">
+            <path d="m6 9 6 6 6-6" />
+        </symbol>
+
+        <symbol id="icon-seta-direita" viewBox="0 0 24 24">
+            <path d="M5 12h14" />
+            <path d="m12 5 7 7-7 7" />
+        </symbol>
+
+        <symbol id="icon-compartilhar" viewBox="0 0 24 24">
+            <path d="M21 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h6" />
+            <path d="m21 3-9 9" />
+            <path d="M15 3h6v6" />
+        </symbol>
+
     </svg>
 
 
@@ -68,7 +120,7 @@
         <div class="navbar">
 
             <a href="home.html" class="logo">
-                <span class="logo-icon">🌿</span>
+                <span class="logo-icon"><svg class="icon" aria-hidden="true"><use href="#icon-brota"></use></svg></span>
                 <span>Nome do site</span>
             </a>
 
@@ -77,7 +129,7 @@
 
                 <div class="dropdown">
                     <button class="dropdown-toggle" type="button" aria-expanded="false">
-                        Setores <span class="dropdown-arrow">▾</span>
+                        Setores <span class="dropdown-arrow"><svg class="icon" aria-hidden="true"><use href="#icon-seta-baixo"></use></svg></span>
                     </button>
 
                     <div class="dropdown-menu">
@@ -150,7 +202,7 @@
 
                 <a href="pegada-ecologica.html"
                    class="hero-button">
-                    <span>🌿</span>
+                    <svg class="icon" aria-hidden="true"><use href="#icon-brota"></use></svg>
                     Entenda a pegada ecológica
                 </a>
 
@@ -175,7 +227,8 @@
                 </div>
 
                 <span class="impact-button">
-                    ◉ &nbsp; Clique nos cards para ver os impactos!
+                    <svg class="icon" aria-hidden="true"><use href="#icon-clique"></use></svg>
+                    Clique nos cards para ver os impactos!
                 </span>
 
             </div>
@@ -196,7 +249,7 @@
                         <p>Geração e consumo</p>
                     </div>
 
-                    <span class="sector-arrow">→</span>
+                    <span class="sector-arrow"><svg class="icon" aria-hidden="true"><use href="#icon-seta-direita"></use></svg></span>
 
                 </a>
 
@@ -214,7 +267,7 @@
                         <p>Terra, água e clima</p>
                     </div>
 
-                    <span class="sector-arrow">→</span>
+                    <span class="sector-arrow"><svg class="icon" aria-hidden="true"><use href="#icon-seta-direita"></use></svg></span>
 
                 </a>
 
@@ -232,7 +285,7 @@
                         <p>Produção e descarte</p>
                     </div>
 
-                    <span class="sector-arrow">→</span>
+                    <span class="sector-arrow"><svg class="icon" aria-hidden="true"><use href="#icon-seta-direita"></use></svg></span>
 
                 </a>
 
@@ -250,7 +303,7 @@
                         <p>Do campo ao prato</p>
                     </div>
 
-                    <span class="sector-arrow">→</span>
+                    <span class="sector-arrow"><svg class="icon" aria-hidden="true"><use href="#icon-seta-direita"></use></svg></span>
 
                 </a>
 
@@ -268,7 +321,7 @@
                         <p>Emissões e logística</p>
                     </div>
 
-                    <span class="sector-arrow">→</span>
+                    <span class="sector-arrow"><svg class="icon" aria-hidden="true"><use href="#icon-seta-direita"></use></svg></span>
 
                 </a>
 
@@ -286,7 +339,7 @@
                         <p>Extração e resíduos</p>
                     </div>
 
-                    <span class="sector-arrow">→</span>
+                    <span class="sector-arrow"><svg class="icon" aria-hidden="true"><use href="#icon-seta-direita"></use></svg></span>
 
                 </a>
 
@@ -304,7 +357,7 @@
                         <p>Materiais e entulho</p>
                     </div>
 
-                    <span class="sector-arrow">→</span>
+                    <span class="sector-arrow"><svg class="icon" aria-hidden="true"><use href="#icon-seta-direita"></use></svg></span>
 
                 </a>
 
@@ -322,7 +375,7 @@
                         <p>Lixo eletrônico e energia</p>
                     </div>
 
-                    <span class="sector-arrow">→</span>
+                    <span class="sector-arrow"><svg class="icon" aria-hidden="true"><use href="#icon-seta-direita"></use></svg></span>
 
                 </a>
 
@@ -335,8 +388,8 @@
         <section class="feedback">
 
             <div class="feedback-brand">
-                <span>🌿</span>
-                <span class="feedback-chat">•••</span>
+                <svg class="icon" aria-hidden="true"><use href="#icon-brota"></use></svg>
+                <span class="feedback-chat"><svg class="icon" aria-hidden="true"><use href="#icon-chat"></use></svg></span>
             </div>
 
 
@@ -357,15 +410,16 @@
 
             <div class="feedback-benefits">
 
-                <p>☆ &nbsp; Leva menos de 5 minutos</p>
-                <p>♟ &nbsp; Sua contribuição é importante</p>
-                <p>✚ &nbsp; Seus dados estão seguros</p>
+                <p><svg class="icon" aria-hidden="true"><use href="#icon-estrela"></use></svg> Leva menos de 5 minutos</p>
+                <p><svg class="icon" aria-hidden="true"><use href="#icon-pessoas"></use></svg> Sua contribuição é importante</p>
+                <p><svg class="icon" aria-hidden="true"><use href="#icon-escudo"></use></svg> Seus dados estão seguros</p>
 
             </div>
 
 
             <a href="#" class="feedback-button">
-                ↗ &nbsp; Acessar formulário
+                <svg class="icon" aria-hidden="true"><use href="#icon-compartilhar"></use></svg>
+                Acessar formulário
             </a>
 
         </section>
@@ -382,7 +436,7 @@
 
             <span>Projeto de Extensão, PUC-Campinas</span>
 
-            <span>🌿 &nbsp; ODS 12 e ODS 13</span>
+            <span><svg class="icon" aria-hidden="true"><use href="#icon-brota"></use></svg> ODS 12 e ODS 13</span>
 
         </div>
 

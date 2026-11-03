@@ -600,6 +600,81 @@ a {
     gap: 10px;
 }
 
+/* ajustes dos novos icones */
+
+.logo-icon {
+    display: flex;              /* icone com 28px, herdando o verde da logo */
+}
+
+.dropdown-arrow .icon {
+    width: 14px;
+    height: 14px;
+    vertical-align: -2px;
+}
+
+.hero-button .icon {
+    width: 16px;
+    height: 16px;
+}
+
+.impact-button {
+    gap: 8px;
+}
+
+.impact-button .icon {
+    width: 16px;
+    height: 16px;
+}
+
+.sector-arrow .icon {
+    width: 14px;
+    height: 14px;
+}
+
+/* balao do bloco de avaliacao: sem a bolinha de fundo antiga */
+.feedback-chat {
+    width: auto;
+    height: auto;
+    background: none;
+    color: #69a875;
+}
+
+.feedback-chat .icon {
+    width: 30px;
+    height: 30px;
+}
+
+.feedback-benefits p {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.feedback-benefits .icon {
+    width: 14px;
+    height: 14px;
+}
+
+.feedback-button {
+    gap: 8px;
+}
+
+.feedback-button .icon {
+    width: 16px;
+    height: 16px;
+}
+
+.footer-content span {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.footer-content .icon {
+    width: 14px;
+    height: 14px;
+}
+
 /* responsividade */
 
 @media (max-width: 1024px) {
