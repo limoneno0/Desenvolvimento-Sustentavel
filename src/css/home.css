@@ -569,6 +569,36 @@ a {
     font-size: 11px;
 }
 
+/* icones svg */
+
+.icon {
+    width: 1em;
+    height: 1em;
+    flex-shrink: 0;
+
+    fill: none;
+    stroke: currentColor;       /* usa a cor do texto/elemento */
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.sector-icon .icon {
+    width: 20px;
+    height: 20px;
+}
+
+.dropdown-menu .icon {
+    width: 18px;
+    height: 18px;
+    color: #16833f;
+}
+
+.menu .dropdown-menu a {
+    display: flex;              /* ícone e texto lado a lado */
+    align-items: center;
+    gap: 10px;
+}
 
 /* responsividade */
 
