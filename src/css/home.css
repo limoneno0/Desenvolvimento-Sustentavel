@@ -16,6 +16,16 @@ body {
     color: #151515;
     width: 100%;
     overflow-x: hidden;
+
+    min-height: 100vh;          /* rodape desce ate o fim em telas altas */
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;
+    position: relative;
+    z-index: 1;                 /* o conteudo fica na frente da imagem do rodape */
 }
 
 a {
@@ -97,7 +107,7 @@ a {
     max-width: none;              /* banner de ponta a ponta da tela */
     min-height: 50px;
 
-    margin: -96px 0 0;            /* sobe para ficar atrás da navbar */
+    margin: -96px 0 0;            /* sobe para ficar atras da navbar */
     /* alinha o texto com a grade de setores */
     padding: 110px 0 20px max(5%, calc((100vw - 1280px) / 2 + 20px));
 
@@ -107,7 +117,7 @@ a {
     display: flex;
     align-items: center;
 
-    background: linear-gradient(110deg, #f4f8ef, #f8faf6); /* só aparece se a imagem tiver transparência */
+    background: linear-gradient(110deg, #f4f8ef, #f8faf6); /* so aparece se a imagem tiver transparencia */
     border-radius: 0;
 }
 
@@ -188,7 +198,7 @@ a {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: right center;  /* mantém o planeta à direita */
+    object-position: right center;  /* mantem o planeta a direita */
     display: block;
 }
 
@@ -359,7 +369,7 @@ a {
     max-width: 1280px;
     min-height: 90px;
 
-    margin: 24px auto 30px;
+    margin: 24px auto 0;        /* sem margem embaixo: o rodape sobe por tras do card */
     padding: 16px 28px;
 
     display: flex;
@@ -455,15 +465,16 @@ a {
 
 .footer {
     width: 100%;
-    margin: 0 auto;
+    margin: -90px auto 0;       /* sobe o rodape por tras do card; teste -50px, -70px, -90px */
     position: relative;
     overflow: hidden;
+    flex-shrink: 0;
 }
 
 .footer img {
     display: block;
     width: 100%;
-    height: auto;          /* a altura segue a proporção da imagem, sem cortar */
+    height: auto;               /* mostra a imagem inteira, sem cortar */
 }
 
 .footer-content {
@@ -478,7 +489,7 @@ a {
     display: flex;
     align-items: flex-end;     /* texto na parte de baixo; use center para o meio */
     justify-content: space-between;
-    padding-bottom: 14px;
+    padding-bottom: 27px;
 
     color: #668277;
     font-size: 11px;
@@ -525,7 +536,7 @@ a {
         margin-right: auto;
     }
 
-    /* No mobile a imagem volta ao fluxo normal, abaixo do texto */
+    /* no mobile a imagem volta ao fluxo normal, abaixo do texto */
     .hero-image {
         position: relative;
         width: 100%;
@@ -551,5 +562,9 @@ a {
     .feedback-benefits {
         padding-left: 0;
         border-left: none;
+    }
+
+    .footer {
+        margin-top: -30px;
     }
 }
