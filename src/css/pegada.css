@@ -1,0 +1,544 @@
+/* pegada ecologica
+   so o que e exclusivo desta pagina; base, header, dropdown, rodape e icones vem do home.css */
+
+
+/* banner */
+
+.pegada-hero {
+    width: 100%;
+    min-height: 340px;
+
+    margin: -96px 0 0;            /* sobe para ficar atras da navbar */
+    padding: 120px 0 56px max(20px, calc((100vw - 1280px) / 2 + 20px));
+
+    position: relative;
+    overflow: hidden;
+
+    display: flex;
+    align-items: center;
+
+    background: linear-gradient(110deg, #f4f8ef, #f8faf6);
+}
+
+.pegada-hero-content {
+    width: 56%;
+    position: relative;
+    z-index: 2;
+}
+
+.pegada-hero-bg {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+}
+
+.pegada-hero-bg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: right center;
+    display: block;
+}
+
+.pegada-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+
+    padding: 9px 22px 9px 18px;
+    margin-bottom: 14px;
+
+    border: 2px solid #cfe6d4;
+    border-radius: 30px;
+    background-color: #ffffffcc;
+
+    color: #075b2c;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.pegada-tag .icon {
+    width: 20px;
+    height: 20px;
+}
+
+.pegada-hero h1 {
+    font-size: clamp(30px, 3.4vw, 48px);
+    line-height: 1.1;
+    font-weight: 600;
+    color: #151515;
+
+    margin-bottom: 14px;
+}
+
+.pegada-hero p {
+    max-width: 600px;
+
+    color: #52677a;
+    font-size: 15px;
+    line-height: 1.55;
+}
+
+.pegada-hero p strong {
+    color: #3d5266;
+    font-weight: 600;
+}
+
+/* fonte (wwf) ao final dos textos */
+.fonte {
+    font-size: 0.85em;
+    font-weight: 600;
+    letter-spacing: 0.3px;
+    color: #6b8294;
+}
+
+
+/* layout em duas colunas */
+
+.pegada-layout {
+    width: 100%;
+    max-width: 1280px;
+    margin: 28px auto 0;
+    padding: 0 20px;
+
+    display: grid;
+    grid-template-columns: minmax(0, 2.1fr) minmax(0, 1fr);
+    gap: 24px;
+    align-items: start;
+}
+
+.pg-card {
+    background-color: #ffffff;
+    border: 1px solid #e7eee4;
+    border-radius: 20px;
+}
+
+.pg-lateral {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+
+/* como e calculada */
+
+.pg-calculada {
+    padding: 24px 22px 26px;
+}
+
+.pg-calculada-topo {
+    display: grid;
+    grid-template-columns: 28px 1fr;
+    gap: 14px;
+}
+
+.pg-titulo-icon {
+    width: 28px;
+    height: 28px;
+    margin-top: 2px;
+    color: #1f6b3c;
+}
+
+.pg-calculada h2 {
+    font-size: 22px;
+    font-weight: 500;
+    color: #1d1d1d;
+
+    margin-bottom: 8px;
+}
+
+.pg-calculada-topo p {
+    color: #5b6d7a;
+    font-size: 14px;
+    line-height: 1.55;
+}
+
+/* categorias */
+
+.pg-categorias {
+    list-style: none;
+    margin: 22px 22px;
+
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 8px;
+
+    text-align: center;
+}
+
+.pg-categoria-icon {
+    width: 56px;
+    height: 56px;
+    margin: 0 auto 8px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+}
+
+.pg-categoria-icon .icon {
+    width: 26px;
+    height: 26px;
+}
+
+.pg-categoria h3 {
+    font-size: 14px;
+    font-weight: 600;
+    color: #222222;
+
+    margin-bottom: 4px;
+}
+
+.pg-categoria p {
+    font-size: 10.5px;
+    line-height: 1.35;
+    color: #7b8b97;
+}
+
+.pg-categoria.alimentos .pg-categoria-icon { background: #fdeeee; color: #ed7279; }
+.pg-categoria.energia   .pg-categoria-icon { background: #fdf1d4; color: #efa33c; }
+.pg-categoria.agua      .pg-categoria-icon { background: #e4f1fb; color: #5599dd; }
+.pg-categoria.madeira   .pg-categoria-icon { background: #ece9e4; color: #a07850; }
+.pg-categoria.infra     .pg-categoria-icon { background: #e8e0f3; color: #7b5aa6; }
+.pg-categoria.residuos  .pg-categoria-icon { background: #e8eef1; color: #6b7f8f; }
+
+/* em numeros */
+
+.pg-numeros {
+    margin: 0 22px 18px;
+    padding: 20px 26px;
+
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+    gap: 20px;
+
+    background-color: #f2f7ef;
+    border: 1px solid #e1ebdd;
+    border-radius: 16px;
+}
+
+.pg-numeros-pe {
+    height: 72px;
+    width: auto;
+    display: block;
+}
+
+.pg-numeros h3 {
+    font-size: 19px;
+    font-weight: 500;
+    color: #2f6b43;
+
+    margin-bottom: 8px;
+}
+
+.pg-destaque {
+    font-size: 15px;
+    line-height: 1.5;
+    color: #2b3a32;
+
+    margin-bottom: 8px;
+}
+
+.pg-destaque span {
+    color: #4c9a5a;
+}
+
+.pg-explica {
+    font-size: 12.5px;
+    line-height: 1.5;
+    color: #6d7f78;
+}
+
+.pg-numeros-planetas {
+    padding-left: 26px;
+    border-left: 1px solid #cfe0cd;
+}
+
+.pg-planetas-imgs {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    margin-bottom: 8px;
+}
+
+.pg-planetas-imgs img {
+    height: 52px;
+    width: auto;
+    display: block;
+}
+
+.pg-numeros-planetas strong {
+    display: block;
+    font-size: 24px;
+    color: #2f6b43;
+}
+
+.pg-numeros-planetas span {
+    font-size: 14px;
+    color: #4c6a58;
+}
+
+/* por que isso importa */
+
+.pg-importa {
+    margin: 0 22px;
+    padding: 16px 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+
+    background-color: #fafcf9;
+    border: 1px solid #e5ede2;
+    border-radius: 16px;
+}
+
+.pg-importa-texto {
+    display: grid;
+    grid-template-columns: 26px 1fr;
+    gap: 12px;
+}
+
+.pg-importa-icon {
+    width: 26px;
+    height: 26px;
+    margin-top: 2px;
+    color: #3f8a55;
+}
+
+.pg-importa h3 {
+    font-size: 19px;
+    font-weight: 500;
+    color: #2f6b43;
+
+    margin-bottom: 4px;
+}
+
+.pg-importa-texto p {
+    font-size: 11.5px;
+    line-height: 1.5;
+    color: #6d7f78;
+}
+
+.pg-importa-destaque {
+    flex: 0 0 38%;
+    padding: 12px 16px;
+
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    background-color: #e9f2e5;
+    border-radius: 12px;
+}
+
+.pg-importa-destaque-icon {
+    width: 36px;
+    height: 36px;
+    color: #4c9a5a;
+}
+
+.pg-importa-destaque p {
+    font-size: 11px;
+    line-height: 1.45;
+    color: #2f6b43;
+}
+
+.pg-importa-destaque span {
+    color: #4c9a5a;
+}
+
+
+/* qual e a sua pegada */
+
+.pg-sua-pegada {
+    overflow: hidden;
+    background-color: #f5f9f4;
+}
+
+.pg-sua-pegada-texto {
+    padding: 24px 28px 18px;
+}
+
+.pg-sua-pegada h2 {
+    font-size: 22px;
+    font-weight: 500;
+    color: #2c4a39;
+
+    margin-bottom: 8px;
+}
+
+.pg-sua-pegada-texto p {
+    font-size: 14px;
+    line-height: 1.5;
+    color: #5b6d7a;
+}
+
+.pg-sua-pegada-botao {
+    padding: 18px;
+
+    display: flex;
+    justify-content: center;
+
+    background-color: #eef4ec;
+}
+
+.pg-botao {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+
+    padding: 11px 30px;
+
+    border: 2px solid #cfe6d4;
+    border-radius: 30px;
+    background-color: #ffffff;
+
+    color: #075b2c;
+    font-size: 15px;
+    font-weight: 600;
+
+    transition: 0.3s;
+}
+
+.pg-botao .icon {
+    width: 20px;
+    height: 20px;
+}
+
+.pg-botao:hover {
+    background-color: #075b2c;
+    border-color: #075b2c;
+    color: #ffffff;
+}
+
+
+/* como reduzir a sua pegada */
+
+.pg-reduzir {
+    padding: 22px 24px;
+    background-color: #f3f8f1;
+}
+
+.pg-reduzir h2 {
+    font-size: 20px;
+    font-weight: 500;
+    color: #2f6b43;
+
+    margin-bottom: 10px;
+}
+
+.pg-acoes {
+    list-style: none;
+}
+
+.pg-acao {
+    padding: 9px 0;
+
+    display: grid;
+    grid-template-columns: 38px 1fr;
+    align-items: center;
+    gap: 14px;
+}
+
+.pg-acao-icon {
+    width: 38px;
+    height: 38px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+    background-color: #2f7a4b;
+    color: #ffffff;
+}
+
+.pg-acao-icon .icon {
+    width: 18px;
+    height: 18px;
+}
+
+.pg-acao h3 {
+    font-size: 14px;
+    font-weight: 500;
+    color: #222222;
+
+    margin-bottom: 2px;
+}
+
+.pg-acao p {
+    font-size: 11px;
+    color: #7b8b97;
+}
+
+
+/* responsividade */
+
+@media (max-width: 1024px) {
+    .pegada-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .pg-categorias {
+        grid-template-columns: repeat(3, 1fr);
+        row-gap: 18px;
+    }
+}
+
+@media (max-width: 768px) {
+    .pegada-hero {
+        margin-top: 0;
+        padding: 40px 20px;
+        min-height: 0;
+        text-align: center;
+    }
+
+    .pegada-hero-content {
+        width: 100%;
+    }
+
+    .pegada-hero p {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .pegada-hero-bg {
+        opacity: 0.35;      /* o texto continua legivel por cima da imagem */
+    }
+
+    .pg-categorias,
+    .pg-numeros,
+    .pg-importa {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .pg-numeros {
+        grid-template-columns: 1fr;
+        justify-items: center;
+        text-align: center;
+    }
+
+    .pg-numeros-planetas {
+        padding-left: 0;
+        padding-top: 16px;
+        border-left: none;
+        border-top: 1px solid #cfe0cd;
+    }
+
+    .pg-importa {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .pg-importa-destaque {
+        flex: none;
+        width: 100%;
+    }
+}

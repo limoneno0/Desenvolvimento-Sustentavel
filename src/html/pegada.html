@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Pegada ecológica | Consumo Consciente</title>
+
+    <!-- home.css traz o que se repete (base, header, dropdown, rodape, icones); pegada.css so o que e desta pagina -->
+    <link rel="stylesheet" href="../css/home.css">
+    <link rel="stylesheet" href="../css/pegada.css">
+    <script src="../js/home.js" defer></script>
+</head>
+
+<body>
+
+    <!-- ícones (sprite svg, fica escondido e é reaproveitado na página inteira) -->
+    <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+
+        <symbol id="icon-energia" viewBox="0 0 24 24">
+            <path d="M15.914 4a1.5 1.5 0 00-2.474-1.561l-9 9A1.5 1.5 0 005.5 14h4.002a.5.5 0 01.471.666L8.086 20a1.5 1.5 0 002.475 1.56l9-9A1.5 1.5 0 0018.5 10h-3.997a.5.5 0 01-.472-.667z" />
+        </symbol>
+
+        <symbol id="icon-agropecuaria" viewBox="0 0 24 24">
+            <path d="M11 20a10 10 0 0010-10 25.9 25.9 0 00-1.04-7.281 1 1 0 00-1.755-.325C15.833 5.5 13 5.5 9.8 6.1A7 7 0 0011 20" />
+            <path d="M2 21a5 5 0 012.911-4.544C7.613 15.212 8.351 15.24 11 13" />
+        </symbol>
+
+        <symbol id="icon-moda" viewBox="0 0 24 24">
+            <path d="M20.38 3.46 16 2a4 4 0 0 1-8 0L3.62 3.46a2 2 0 0 0-1.34 2.23l.58 3.47a1 1 0 0 0 .99.84H6v10c0 1.1.9 2 2 2h8a2 2 0 0 0 2-2V10h2.15a1 1 0 0 0 .99-.84l.58-3.47a2 2 0 0 0-1.34-2.23z" />
+        </symbol>
+
+        <symbol id="icon-alimentos" viewBox="0 0 24 24">
+            <path d="M3 2v7c0 1.1.9 2 2 2h4a2 2 0 0 0 2-2V2" />
+            <path d="M7 2v20" />
+            <path d="M21 15V2a5 5 0 0 0-5 5v6c0 1.1.9 2 2 2h3Zm0 0v7" />
+        </symbol>
+
+        <symbol id="icon-transporte" viewBox="0 0 24 24">
+            <path d="M14 18V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v11a1 1 0 0 0 1 1h2" />
+            <path d="M15 18H9" />
+            <path d="M19 18h2a1 1 0 0 0 1-1v-3.65a1 1 0 0 0-.22-.624l-3.48-4.35A1 1 0 0 0 17.52 8H14" />
+            <circle cx="17" cy="18" r="2" />
+            <circle cx="7" cy="18" r="2" />
+        </symbol>
+
+        <symbol id="icon-mineracao" viewBox="0 0 24 24">
+            <path d="M10.5 3 8 9l4 13 4-13-2.5-6" />
+            <path d="M17 3a2 2 0 0 1 1.6.8l3 4a2 2 0 0 1 .013 2.382l-7.99 10.986a2 2 0 0 1-3.247 0l-7.99-10.986A2 2 0 0 1 2.4 7.8l2.998-3.997A2 2 0 0 1 7 3z" />
+            <path d="M2 9h20" />
+        </symbol>
+
+        <symbol id="icon-construcao" viewBox="0 0 24 24">
+            <path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8" />
+            <path d="M3 10a2 2 0 0 1 .709-1.528l7-6a2 2 0 0 1 2.582 0l7 6A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
+        </symbol>
+
+        <symbol id="icon-tecnologia" viewBox="0 0 24 24">
+            <path d="M18 8V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v7a2 2 0 0 0 2 2h8" />
+            <path d="M10 19v-3.96 3.15" />
+            <path d="M7 19h5" />
+            <rect width="6" height="10" x="16" y="12" rx="2" />
+        </symbol>
+
+        <symbol id="icon-brota" viewBox="0 0 24 24">
+            <path d="M14 9.536V7a4 4 0 0 1 4-4h1.5a.5.5 0 0 1 .5.5V5a4 4 0 0 1-4 4 4 4 0 0 0-4 4c0 2 1 3 1 5a5 5 0 0 1-1 3" />
+            <path d="M4 9a5 5 0 0 1 8 4 5 5 0 0 1-8-4" />
+            <path d="M5 21h14" />
+        </symbol>
+
+        <symbol id="icon-seta-baixo" viewBox="0 0 24 24">
+            <path d="m6 9 6 6 6-6" />
+        </symbol>
+
+        <symbol id="icon-calculadora" viewBox="0 0 24 24">
+            <rect width="16" height="20" x="4" y="2" rx="2" />
+            <line x1="8" x2="16" y1="6" y2="6" />
+            <line x1="16" x2="16" y1="14" y2="18" />
+            <path d="M16 10h.01" />
+            <path d="M12 10h.01" />
+            <path d="M8 10h.01" />
+            <path d="M12 14h.01" />
+            <path d="M8 14h.01" />
+            <path d="M12 18h.01" />
+            <path d="M8 18h.01" />
+        </symbol>
+
+        <symbol id="icon-gota" viewBox="0 0 24 24">
+            <path d="M12 22a7 7 0 0 0 7-7c0-2-1-3.9-3-5.5s-3.5-4-4-6.5c-.5 2.5-2 4.9-4 6.5C6 11.1 5 13 5 15a7 7 0 0 0 7 7z" />
+        </symbol>
+
+        <symbol id="icon-pinheiro" viewBox="0 0 24 24">
+            <path d="m17 14 3 3.3a1 1 0 0 1-.7 1.7H4.7a1 1 0 0 1-.7-1.7L7 14h-.3a1 1 0 0 1-.7-1.7L9 9h-.2A1 1 0 0 1 8 7.3L12 3l4 4.3a1 1 0 0 1-.8 1.7H15l3 3.3a1 1 0 0 1-.7 1.7H17Z" />
+            <path d="M12 22v-3" />
+        </symbol>
+
+        <symbol id="icon-predio" viewBox="0 0 24 24">
+            <path d="M10 12h4" />
+            <path d="M10 8h4" />
+            <path d="M14 21v-3a2 2 0 0 0-4 0v3" />
+            <path d="M6 10H4a2 2 0 0 0-2 2v7a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-2" />
+            <path d="M6 21V5a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v16" />
+        </symbol>
+
+        <symbol id="icon-lixeira" viewBox="0 0 24 24">
+            <path d="M10 11v6" />
+            <path d="M14 11v6" />
+            <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6" />
+            <path d="M3 6h18" />
+            <path d="M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2" />
+        </symbol>
+
+        <symbol id="icon-sacola" viewBox="0 0 24 24">
+            <path d="M16 10a4 4 0 0 1-8 0" />
+            <path d="M3.103 6.034h17.794" />
+            <path d="M3.4 5.467a2 2 0 0 0-.4 1.2V20a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6.667a2 2 0 0 0-.4-1.2l-2-2.667A2 2 0 0 0 17 2H7a2 2 0 0 0-1.6.8z" />
+        </symbol>
+
+        <symbol id="icon-bicicleta" viewBox="0 0 24 24">
+            <circle cx="18.5" cy="17.5" r="3.5" />
+            <circle cx="5.5" cy="17.5" r="3.5" />
+            <circle cx="15" cy="5" r="1" />
+            <path d="M12 17.5V14l-3-3 4-3 2 3h2" />
+        </symbol>
+
+        <symbol id="icon-reciclar" viewBox="0 0 24 24">
+            <path d="M7 19H4.815a1.83 1.83 0 0 1-1.57-.881 1.785 1.785 0 0 1-.004-1.784L7.196 9.5" />
+            <path d="M11 19h8.203a1.83 1.83 0 0 0 1.556-.89 1.784 1.784 0 0 0 0-1.775l-1.226-2.12" />
+            <path d="m14 16-3 3 3 3" />
+            <path d="M8.293 13.596 7.196 9.5 3.1 10.598" />
+            <path d="m9.344 5.811 1.093-1.892A1.83 1.83 0 0 1 11.985 3a1.784 1.784 0 0 1 1.546.888l3.943 6.843" />
+            <path d="m13.378 9.633 4.096 1.098 1.097-4.096" />
+        </symbol>
+
+        <symbol id="icon-globo" viewBox="0 0 24 24">
+            <circle cx="12" cy="12" r="10" />
+            <path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20" />
+            <path d="M2 12h20" />
+        </symbol>
+
+    </svg>
+
+
+    <!-- header -->
+    <header class="header">
+        <div class="navbar">
+
+            <a href="home.html" class="logo">
+                <span class="logo-icon">
+                    <img src="../../assets/home/planta_icon.PNG" alt="">
+                </span>
+                <span>Nome do site</span>
+            </a>
+
+            <nav class="menu">
+                <a href="home.html">Início</a>
+
+                <div class="dropdown">
+                    <button class="dropdown-toggle" type="button" aria-expanded="false">
+                        Setores
+                        <span class="dropdown-arrow">
+                            <svg class="icon" aria-hidden="true"><use href="#icon-seta-baixo"></use></svg>
+                        </span>
+                    </button>
+
+                    <div class="dropdown-menu">
+                        <a href="energia.html">
+                            <svg class="icon" aria-hidden="true"><use href="#icon-energia"></use></svg>
+                            Energia
+                        </a>
+                        <a href="agropecuaria.html">
+                            <svg class="icon" aria-hidden="true"><use href="#icon-agropecuaria"></use></svg>
+                            Agropecuária
+                        </a>
+                        <a href="moda-textil.html">
+                            <svg class="icon" aria-hidden="true"><use href="#icon-moda"></use></svg>
+                            Moda e têxtil
+                        </a>
+                        <a href="alimentos.html">
+                            <svg class="icon" aria-hidden="true"><use href="#icon-alimentos"></use></svg>
+                            Alimentos
+                        </a>
+                        <a href="transporte.html">
+                            <svg class="icon" aria-hidden="true"><use href="#icon-transporte"></use></svg>
+                            Transporte
+                        </a>
+                        <a href="mineracao.html">
+                            <svg class="icon" aria-hidden="true"><use href="#icon-mineracao"></use></svg>
+                            Mineração
+                        </a>
+                        <a href="construcao-civil.html">
+                            <svg class="icon" aria-hidden="true"><use href="#icon-construcao"></use></svg>
+                            Construção Civil
+                        </a>
+                        <a href="tecnologia.html">
+                            <svg class="icon" aria-hidden="true"><use href="#icon-tecnologia"></use></svg>
+                            Tecnologia
+                        </a>
+                    </div>
+                </div>
+
+                <a href="pegada.html" class="active">Pegada ecológica</a>
+                <a href="#sobre">Sobre</a>
+            </nav>
+
+        </div>
+    </header>
+
+
+    <main>
+
+        <!-- banner -->
+        <section class="pegada-hero">
+
+            <div class="pegada-hero-content">
+
+                <span class="pegada-tag">
+                    <svg class="icon" aria-hidden="true"><use href="#icon-brota"></use></svg>
+                    Pegada ecológica
+                </span>
+
+                <h1>O que é a pegada ecológica?</h1>
+
+                <p>
+                    A <strong>pegada ecológica é uma ferramenta de contabilidade
+                    ambiental que mede a quantidade de recursos naturais renováveis
+                    e de áreas produtivas</strong> (como terras agrícolas, florestas,
+                    pastagens e zonas de pesca) necessárias para sustentar o estilo
+                    de vida de uma pessoa, cidade ou país.
+                    <span class="fonte">WWF</span>
+                </p>
+
+            </div>
+
+            <!-- imagem de fundo do banner -->
+            <div class="pegada-hero-bg">
+                <img src="../../assets/pegada/pegada_banner.JPG" alt="">
+            </div>
+
+        </section>
+
+
+        <div class="pegada-layout">
+
+            <!-- coluna principal -->
+            <section class="pg-card pg-calculada">
+
+                <div class="pg-calculada-topo">
+                    <svg class="icon pg-titulo-icon" aria-hidden="true"><use href="#icon-calculadora"></use></svg>
+                    <div>
+                        <h2>Como é calculada?</h2>
+                        <p>
+                            A pegada ecológica é calculada somando a área de terra e de mar
+                            produtivas necessária para produzir os recursos que consumimos,
+                            como alimentos, energia e água, e para absorver os resíduos
+                            gerados. <span class="fonte">WWF</span>
+                        </p>
+                    </div>
+                </div>
+
+                <ul class="pg-categorias">
+                <li class="pg-categoria alimentos">
+                    <span class="pg-categoria-icon"><svg class="icon" aria-hidden="true"><use href="#icon-alimentos"></use></svg></span>
+                    <h3>Alimentos</h3>
+                    <p>área de cultivo e pastagens</p>
+                </li>
+                <li class="pg-categoria energia">
+                    <span class="pg-categoria-icon"><svg class="icon" aria-hidden="true"><use href="#icon-energia"></use></svg></span>
+                    <h3>Energia</h3>
+                    <p>área para energia renovável e não renovável</p>
+                </li>
+                <li class="pg-categoria agua">
+                    <span class="pg-categoria-icon"><svg class="icon" aria-hidden="true"><use href="#icon-gota"></use></svg></span>
+                    <h3>Água</h3>
+                    <p>recursos hídricos envolvidos</p>
+                </li>
+                <li class="pg-categoria madeira">
+                    <span class="pg-categoria-icon"><svg class="icon" aria-hidden="true"><use href="#icon-pinheiro"></use></svg></span>
+                    <h3>Madeira e fibras</h3>
+                    <p>florestas e solos produtivos</p>
+                </li>
+                <li class="pg-categoria infra">
+                    <span class="pg-categoria-icon"><svg class="icon" aria-hidden="true"><use href="#icon-predio"></use></svg></span>
+                    <h3>Infraestrutura</h3>
+                    <p>área para cidades e construções</p>
+                </li>
+                <li class="pg-categoria residuos">
+                    <span class="pg-categoria-icon"><svg class="icon" aria-hidden="true"><use href="#icon-lixeira"></use></svg></span>
+                    <h3>Resíduos</h3>
+                    <p>área para absorver os dejetos</p>
+                </li>
+                </ul>
+
+                <!-- em numeros -->
+                <div class="pg-numeros">
+
+                    <img class="pg-numeros-pe" src="../../assets/pegada/pe.PNG" alt="">
+
+                    <div class="pg-numeros-texto">
+                        <h3>Em números</h3>
+                        <p class="pg-destaque">
+                            Atualmente, a humanidade utiliza cerca de
+                            <span>1,7 planetas</span> Terra para manter o seu estilo de vida.
+                        </p>
+                        <p class="pg-explica">
+                            Isso significa que estamos consumindo mais recursos do que o
+                            planeta consegue regenerar no mesmo período.
+                        </p>
+                    </div>
+
+                    <div class="pg-numeros-planetas">
+                        <div class="pg-planetas-imgs">
+                            <img src="../../assets/pegada/planeta.PNG" alt="">
+                            <img src="../../assets/pegada/planetametade.PNG" alt="">
+                        </div>
+                        <strong>1,7</strong>
+                        <span>planetas Terra</span>
+                    </div>
+
+                </div>
+
+                <!-- por que importa -->
+                <div class="pg-importa">
+
+                    <div class="pg-importa-texto">
+                        <svg class="icon pg-importa-icon" aria-hidden="true"><use href="#icon-brota"></use></svg>
+                        <div>
+                            <h3>Por que isso importa?</h3>
+                            <p>
+                                Quando a pegada ecológica é maior do que a capacidade do
+                                planeta de se regenerar, os recursos naturais ficam esgotados,
+                                os ecossistemas se degradam e há perda de biodiversidade.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="pg-importa-destaque">
+                        <svg class="icon pg-importa-destaque-icon" aria-hidden="true"><use href="#icon-brota"></use></svg>
+                        <p>
+                            Reduzir a nossa pegada ecológica é garantir um futuro mais
+                            equilibrado, justo e sustentável para as
+                            <span>próximas gerações.</span>
+                        </p>
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- coluna lateral -->
+            <aside class="pg-lateral">
+
+                <section class="pg-card pg-sua-pegada">
+
+                    <div class="pg-sua-pegada-texto">
+                        <h2>Qual é a sua pegada?</h2>
+                        <p>
+                            A pegada ecológica varia conforme o estilo de vida, o consumo
+                            e a região. Em média, no Brasil, ela é de cerca de 2,9 hectares
+                            globais por pessoa.
+                        </p>
+                    </div>
+
+                    <div class="pg-sua-pegada-botao">
+                        <a href="#" class="pg-botao">
+                            <svg class="icon" aria-hidden="true"><use href="#icon-globo"></use></svg>
+                            Calcule sua pegada!
+                        </a>
+                    </div>
+
+                </section>
+
+
+                <section class="pg-card pg-reduzir">
+
+                    <h2>Como reduzir a sua pegada?</h2>
+
+                    <ul class="pg-acoes">
+                    <li class="pg-acao">
+                        <span class="pg-acao-icon"><svg class="icon" aria-hidden="true"><use href="#icon-sacola"></use></svg></span>
+                        <div>
+                            <h3>Consuma de forma consciente</h3>
+                            <p>Compre por necessidade, não por impulso.</p>
+                        </div>
+                    </li>
+                    <li class="pg-acao">
+                        <span class="pg-acao-icon"><svg class="icon" aria-hidden="true"><use href="#icon-energia"></use></svg></span>
+                        <div>
+                            <h3>Economize energia</h3>
+                            <p>Use aparelhos eficientes e fontes renováveis.</p>
+                        </div>
+                    </li>
+                    <li class="pg-acao">
+                        <span class="pg-acao-icon"><svg class="icon" aria-hidden="true"><use href="#icon-gota"></use></svg></span>
+                        <div>
+                            <h3>Reduza o consumo de água</h3>
+                            <p>Evite desperdícios no dia a dia.</p>
+                        </div>
+                    </li>
+                    <li class="pg-acao">
+                        <span class="pg-acao-icon"><svg class="icon" aria-hidden="true"><use href="#icon-bicicleta"></use></svg></span>
+                        <div>
+                            <h3>Escolha transportes sustentáveis</h3>
+                            <p>Priorize transporte público, bicicleta ou caminhada.</p>
+                        </div>
+                    </li>
+                    <li class="pg-acao">
+                        <span class="pg-acao-icon"><svg class="icon" aria-hidden="true"><use href="#icon-reciclar"></use></svg></span>
+                        <div>
+                            <h3>Diminua o uso de plásticos</h3>
+                            <p>Opte por alternativas reutilizáveis.</p>
+                        </div>
+                    </li>
+                    </ul>
+
+                </section>
+
+            </aside>
+
+        </div>
+
+    </main>
+
+
+    <!-- rodape -->
+    <footer class="footer" id="sobre">
+
+        <img src="../../assets/home/footer.PNG" alt="Ilustração de natureza">
+
+        <div class="footer-content">
+            <span>Projeto de Extensão, PUC-Campinas</span>
+            <span><svg class="icon" aria-hidden="true"><use href="#icon-brota"></use></svg> ODS 12 e ODS 13</span>
+        </div>
+
+    </footer>
+
+</body>
+</html>
