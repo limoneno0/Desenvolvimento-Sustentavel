@@ -531,7 +531,7 @@ a {
 
     white-space: nowrap;
 
-    padding: 11px 20px;
+    padding: 11px 25px;
 
     background-color: #075b2c;
     color: white;
@@ -542,6 +542,7 @@ a {
     font-weight: 600;
 
     transition: 0.3s;
+    transform: translateX(60px);
 }
 
 .feedback-button:hover {
