@@ -637,19 +637,6 @@ a {
     height: 14px;
 }
 
-/* balao do bloco de avaliacao: sem a bolinha de fundo antiga */
-.feedback-chat {
-    width: auto;
-    height: auto;
-    background: none;
-    color: #69a875;
-}
-
-.feedback-chat .icon {
-    width: 30px;
-    height: 30px;
-}
-
 .feedback-benefits p {
     display: flex;
     align-items: center;
@@ -679,6 +666,12 @@ a {
 .footer-content .icon {
     width: 14px;
     height: 14px;
+}
+
+.feedback-brand img {
+    height: 60px;       /* teste 44px, 56px, 64px... */
+    width: auto;        /* mantém a proporção original */
+    display: block;
 }
 
 /* responsividade */
