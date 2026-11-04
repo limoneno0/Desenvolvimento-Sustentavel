@@ -601,6 +601,12 @@ a {
 }
 
 /* ajustes dos novos icones */
+.logo-icon img {
+    height: 32px;       /* teste 28px, 36px, 40px... */
+    width: auto;        /* mantém a proporção original */
+    display: block;
+    transform: translate(-6px, -2px);   /* (horizontal, vertical) */
+}
 
 .logo-icon {
     display: flex;              /* icone com 28px, herdando o verde da logo */
