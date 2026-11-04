@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Sobre o projeto | Consumo Consciente</title>
+
+    <!-- home.css traz o que se repete (base, header, dropdown, icones); sobre.css so o que e desta pagina -->
+    <link rel="stylesheet" href="../css/home.css">
+    <link rel="stylesheet" href="../css/sobre.css">
+    <script src="../js/home.js" defer></script>
+</head>
+
+<body class="pagina-sobre">
+
+    <!-- ícones (sprite svg, fica escondido e é reaproveitado na página inteira) -->
+    <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+
+        <symbol id="icon-energia" viewBox="0 0 24 24">
+            <path d="M15.914 4a1.5 1.5 0 00-2.474-1.561l-9 9A1.5 1.5 0 005.5 14h4.002a.5.5 0 01.471.666L8.086 20a1.5 1.5 0 002.475 1.56l9-9A1.5 1.5 0 0018.5 10h-3.997a.5.5 0 01-.472-.667z" />
+        </symbol>
+
+        <symbol id="icon-agropecuaria" viewBox="0 0 24 24">
+            <path d="M11 20a10 10 0 0010-10 25.9 25.9 0 00-1.04-7.281 1 1 0 00-1.755-.325C15.833 5.5 13 5.5 9.8 6.1A7 7 0 0011 20" />
+            <path d="M2 21a5 5 0 012.911-4.544C7.613 15.212 8.351 15.24 11 13" />
+        </symbol>
+
+        <symbol id="icon-moda" viewBox="0 0 24 24">
+            <path d="M20.38 3.46 16 2a4 4 0 0 1-8 0L3.62 3.46a2 2 0 0 0-1.34 2.23l.58 3.47a1 1 0 0 0 .99.84H6v10c0 1.1.9 2 2 2h8a2 2 0 0 0 2-2V10h2.15a1 1 0 0 0 .99-.84l.58-3.47a2 2 0 0 0-1.34-2.23z" />
+        </symbol>
+
+        <symbol id="icon-alimentos" viewBox="0 0 24 24">
+            <path d="M3 2v7c0 1.1.9 2 2 2h4a2 2 0 0 0 2-2V2" />
+            <path d="M7 2v20" />
+            <path d="M21 15V2a5 5 0 0 0-5 5v6c0 1.1.9 2 2 2h3Zm0 0v7" />
+        </symbol>
+
+        <symbol id="icon-transporte" viewBox="0 0 24 24">
+            <path d="M14 18V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v11a1 1 0 0 0 1 1h2" />
+            <path d="M15 18H9" />
+            <path d="M19 18h2a1 1 0 0 0 1-1v-3.65a1 1 0 0 0-.22-.624l-3.48-4.35A1 1 0 0 0 17.52 8H14" />
+            <circle cx="17" cy="18" r="2" />
+            <circle cx="7" cy="18" r="2" />
+        </symbol>
+
+        <symbol id="icon-mineracao" viewBox="0 0 24 24">
+            <path d="M10.5 3 8 9l4 13 4-13-2.5-6" />
+            <path d="M17 3a2 2 0 0 1 1.6.8l3 4a2 2 0 0 1 .013 2.382l-7.99 10.986a2 2 0 0 1-3.247 0l-7.99-10.986A2 2 0 0 1 2.4 7.8l2.998-3.997A2 2 0 0 1 7 3z" />
+            <path d="M2 9h20" />
+        </symbol>
+
+        <symbol id="icon-construcao" viewBox="0 0 24 24">
+            <path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8" />
+            <path d="M3 10a2 2 0 0 1 .709-1.528l7-6a2 2 0 0 1 2.582 0l7 6A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
+        </symbol>
+
+        <symbol id="icon-tecnologia" viewBox="0 0 24 24">
+            <path d="M18 8V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v7a2 2 0 0 0 2 2h8" />
+            <path d="M10 19v-3.96 3.15" />
+            <path d="M7 19h5" />
+            <rect width="6" height="10" x="16" y="12" rx="2" />
+        </symbol>
+
+        <symbol id="icon-seta-baixo" viewBox="0 0 24 24">
+            <path d="m6 9 6 6 6-6" />
+        </symbol>
+
+        <symbol id="icon-seta-esquerda" viewBox="0 0 24 24">
+            <path d="m12 19-7-7 7-7" />
+            <path d="M19 12H5" />
+        </symbol>
+
+    </svg>
+
+
+    <!-- header -->
+    <header class="header">
+        <div class="navbar">
+
+            <a href="home.html" class="logo">
+                <span class="logo-icon">
+                    <img src="../../assets/home/planta_icon.PNG" alt="">
+                </span>
+                <span>Nome do site</span>
+            </a>
+
+            <nav class="menu">
+                <a href="home.html">Início</a>
+
+                <div class="dropdown">
+                    <button class="dropdown-toggle" type="button" aria-expanded="false">
+                        Setores
+                        <span class="dropdown-arrow">
+                            <svg class="icon" aria-hidden="true"><use href="#icon-seta-baixo"></use></svg>
+                        </span>
+                    </button>
+
+                    <div class="dropdown-menu">
+                        <a href="energia.html">
+                            <svg class="icon" aria-hidden="true"><use href="#icon-energia"></use></svg>
+                            Energia
+                        </a>
+                        <a href="agropecuaria.html">
+                            <svg class="icon" aria-hidden="true"><use href="#icon-agropecuaria"></use></svg>
+                            Agropecuária
+                        </a>
+                        <a href="moda-textil.html">
+                            <svg class="icon" aria-hidden="true"><use href="#icon-moda"></use></svg>
+                            Moda e têxtil
+                        </a>
+                        <a href="alimentos.html">
+                            <svg class="icon" aria-hidden="true"><use href="#icon-alimentos"></use></svg>
+                            Alimentos
+                        </a>
+                        <a href="transporte.html">
+                            <svg class="icon" aria-hidden="true"><use href="#icon-transporte"></use></svg>
+                            Transporte
+                        </a>
+                        <a href="mineracao.html">
+                            <svg class="icon" aria-hidden="true"><use href="#icon-mineracao"></use></svg>
+                            Mineração
+                        </a>
+                        <a href="construcao-civil.html">
+                            <svg class="icon" aria-hidden="true"><use href="#icon-construcao"></use></svg>
+                            Construção Civil
+                        </a>
+                        <a href="tecnologia.html">
+                            <svg class="icon" aria-hidden="true"><use href="#icon-tecnologia"></use></svg>
+                            Tecnologia
+                        </a>
+                    </div>
+                </div>
+
+                <a href="pegada.html">Pegada ecológica</a>
+                <a href="sobre.html" class="active">Sobre</a>
+            </nav>
+
+        </div>
+    </header>
+
+
+    <main class="sobre">
+
+        <a href="home.html" class="sobre-voltar">
+            <svg class="icon" aria-hidden="true"><use href="#icon-seta-esquerda"></use></svg>
+            Voltar para a página inicial
+        </a>
+
+        <section class="sobre-conteudo">
+
+            <img class="sobre-logo" src="../../assets/home/planta_icon.PNG" alt="">
+
+            <h1>Sobre o projeto</h1>
+
+            <span class="sobre-linha"></span>
+
+            <p>
+                Este site foi desenvolvido por um grupo de estudantes da faculdade
+                com o objetivo de tornar a informação ambiental mais acessível,
+                clara e confiável para todos.
+            </p>
+
+            <p>
+                Acreditamos que pequenas atitudes, quando bem informadas, podem
+                gerar grandes impactos. Por isso, reunimos dados e explicações
+                sobre diferentes setores e seus impactos no meio ambiente,
+                incentivando um consumo mais consciente e sustentável.
+            </p>
+
+            <img class="sobre-planeta" src="../../assets/sobre/planeta_sobre.PNG" alt="Planeta Terra entre folhas">
+
+        </section>
+
+    </main>
+
+</body>
+</html>

@@ -1,0 +1,115 @@
+/* fundo da pagina: imagem verde com plantinhas */
+
+.pagina-sobre {
+    background:
+        #f7fbf4
+        url("../../assets/sobre/fundo_sobre.jpg")
+        center / cover
+        no-repeat;
+}
+
+
+/* conteudo */
+
+.sobre {
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 20px 60px;
+}
+
+.sobre-voltar {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+
+    margin-top: 6px;
+
+    color: #0b6b34;
+    font-size: 14px;
+    font-weight: 500;
+
+    transition: 0.3s;
+}
+
+.sobre-voltar .icon {
+    width: 16px;
+    height: 16px;
+}
+
+.sobre-voltar:hover {
+    color: #075b2c;
+    transform: translateX(-3px);
+}
+
+.sobre-conteudo {
+    max-width: 880px;
+    margin: 0 auto;
+    padding-top: 10px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.sobre-logo {
+    height: 80px;               /* teste 70px, 90px, 100px... */
+    width: auto;
+    display: block;
+
+    margin-bottom: 14px;
+}
+
+.sobre-conteudo h1 {
+    font-size: clamp(36px, 4.4vw, 60px);
+    line-height: 1.1;
+    font-weight: 600;
+    color: #0d3b2e;
+}
+
+.sobre-linha {
+    display: block;
+    width: 140px;
+    height: 3px;
+
+    margin: 22px 0 36px;
+
+    border-radius: 3px;
+    background-color: #3f9a54;
+}
+
+.sobre-conteudo p {
+    font-size: clamp(16px, 1.5vw, 21px);
+    line-height: 1.6;
+    color: #27403a;
+
+    text-wrap: balance;         /* quebra de linha mais equilibrada, como no desenho */
+}
+
+.sobre-conteudo p + p {
+    margin-top: 26px;
+}
+
+.sobre-planeta {
+    width: 340px;               /* teste 300px, 340px, 380px... */
+    max-width: 80%;
+    height: auto;
+    display: block;
+
+    margin-top: 40px;
+}
+
+
+/* responsividade */
+
+@media (max-width: 768px) {
+    .sobre-linha {
+        margin: 18px 0 26px;
+    }
+
+    .sobre-planeta {
+        width: 260px;
+        margin-top: 28px;
+    }
+}
