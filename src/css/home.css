@@ -760,4 +760,15 @@ a {
     .footer {
         margin-top: -30px;
     }
+
+    .feedback-flower {
+    top: 0;
+    right: 0;
+    height: 70px;   /* ajuste: 50px, 60px, 80px... */
+    width: auto;
+    }
+
+    .feedback-button {
+    transform: none;   /* o deslocamento de 60px só faz sentido no desktop */
+    }
 }
