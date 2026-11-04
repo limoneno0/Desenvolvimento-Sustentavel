@@ -439,8 +439,8 @@ a {
 /* avaliacoes e sugestoes */
 
 .feedback {
-    width: 100%;
-    max-width: 1280px;
+    width: calc(100% - 40px);   /* 20px de recuo de cada lado, igual ao .sectors */
+    max-width: 1240px; 
     min-height: 90px;
 
     margin: 24px auto 0;        /* sem margem embaixo, o rodape sobe por tras do card */
@@ -448,12 +448,26 @@ a {
 
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    gap: 16px;
+    justify-content: left;
+    gap: 52px;
 
     background-color: #edf6eb;
     border: 1px solid #d7ead4;
     border-radius: 20px;
+
+    position: relative;
+    overflow: hidden;       /* a imagem respeita os cantos arredondados */
+    padding-right: 90px;
+}
+
+.feedback-flower {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;           /* acompanha a altura do card */
+    width: auto;            /* mantém a proporção */
+
+    pointer-events: none;   /* o clique passa direto, não atrapalha o botão */
 }
 
 .feedback-brand {
