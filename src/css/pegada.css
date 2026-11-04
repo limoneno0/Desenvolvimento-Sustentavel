@@ -271,6 +271,10 @@
     display: block;
 }
 
+.pg-planetas-imgs img:nth-child(2) {
+    height: 60px;       /* teste 58px, 62px, 66px... */
+}
+
 .pg-numeros-planetas strong {
     display: block;
     font-size: 24px;
