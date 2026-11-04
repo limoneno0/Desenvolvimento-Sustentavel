@@ -183,7 +183,7 @@ a {
 
     margin: -96px 0 0;            /* sobe para ficar atras da navbar */
     /* alinha o texto com a grade de setores */
-    padding: 110px 0 20px max(5%, calc((100vw - 1280px) / 2 + 20px));
+    padding: 110px 0 23.2px max(5%, calc((100vw - 1280px) / 2 + 20px));
 
     position: relative;
     overflow: hidden;
@@ -206,20 +206,20 @@ a {
     display: block;
     color: #548653;
 
-    font-size: 15px;
+    font-size: 17.4px;
     letter-spacing: 0.2px;
 
-    margin-bottom: 10px;
+    margin-bottom: 11.6px;
 }
 
 .hero h1 {
-    max-width: 520px;
+    max-width: 603px;
 
-    font-size: clamp(26px, 2.5vw, 36px);
+    font-size: clamp(30px, 2.9vw, 41.8px);
     line-height: 1.18;
     font-weight: 600;
 
-    margin-bottom: 14px;
+    margin-bottom: 16.2px;
 }
 
 .hero h1 span {
@@ -227,21 +227,21 @@ a {
 }
 
 .hero-content p {
-    max-width: 460px;
+    max-width: 534px;
 
     color: #52677a;
-    font-size: 13px;
+    font-size: 15.1px;
     line-height: 1.5;
 
-    margin-bottom: 20px;
+    margin-bottom: 23.2px;
 }
 
 .hero-button {
     display: inline-flex;
     align-items: center;
-    gap: 8px;
+    gap: 9.3px;
 
-    padding: 10px 18px;
+    padding: 11.6px 20.9px;
 
     border: 1px solid #b9ddc3;
     border-radius: 30px;
@@ -249,7 +249,7 @@ a {
     background-color: #ffffffd9;
     color: #075b2c;
 
-    font-size: 13px;
+    font-size: 15.1px;
     font-weight: 600;
 
     transition: 0.3s;
@@ -291,20 +291,20 @@ a {
     align-items: center;
     justify-content: space-between;
 
-    margin-bottom: 16px;
+    margin-bottom: 18.6px;
 }
 
 .heading-line {
     display: block;
-    width: 24px;
+    width: 27.8px;
     height: 3px;
 
     background-color: #16833f;
-    margin-bottom: 4px;
+    margin-bottom: 4.6px;
 }
 
 .section-heading h2 {
-    font-size: 20px;
+    font-size: 23.2px;
     font-weight: 600;
 }
 
@@ -312,13 +312,13 @@ a {
     display: inline-flex;
     align-items: center;
 
-    padding: 9px 16px;
+    padding: 10.4px 18.6px;
 
     border-radius: 30px;
     background-color: #edf5ed;
 
     color: #16713b;
-    font-size: 12px;
+    font-size: 13.9px;
     font-weight: 600;
 
     transition: 0.3s;
@@ -334,22 +334,22 @@ a {
 .sector-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 16px;
+    gap: 18.6px;
 }
 
 .sector-card {
-    min-height: 88px;
+    min-height: 102px;
 
-    padding: 12px 16px;
+    padding: 13.9px 18.6px;
 
     display: flex;
     align-items: center;
-    gap: 12px;
+    gap: 13.9px;
 
     position: relative;
 
     border: 1px solid;
-    border-radius: 20px;
+    border-radius: 23.2px;
 
     transition: 0.25s;
 }
@@ -360,8 +360,8 @@ a {
 }
 
 .sector-icon {
-    width: 36px;
-    height: 36px;
+    width: 41.8px;
+    height: 41.8px;
     flex-shrink: 0;
 
     display: flex;
@@ -371,24 +371,24 @@ a {
     border-radius: 50%;
 
     color: #ffffff;
-    font-size: 18px;
+    font-size: 20.9px;
     font-weight: bold;
 }
 
 .sector-info h3 {
-    font-size: 13px;
+    font-size: 15.1px;
     font-weight: 600;
-    margin-bottom: 3px;
+    margin-bottom: 3.5px;
 }
 
 .sector-info p {
-    font-size: 10px;
+    font-size: 11.6px;
     color: #607286;
 }
 
 .sector-arrow {
-    width: 24px;
-    height: 24px;
+    width: 27.8px;
+    height: 27.8px;
 
     display: flex;
     align-items: center;
@@ -397,7 +397,7 @@ a {
     border-radius: 50%;
 
     margin-left: auto;
-    font-size: 14px;
+    font-size: 16.2px;
 }
 
 
@@ -440,11 +440,11 @@ a {
 
 .feedback {
     width: calc(100% - 40px);   /* 20px de recuo de cada lado, igual ao .sectors */
-    max-width: 1240px; 
-    min-height: 90px;
+    max-width: 1240px;
+    min-height: 104.4px;
 
     margin: 24px auto 0;        /* sem margem embaixo, o rodape sobe por tras do card */
-    padding: 16px 28px;
+    padding: 18.6px 32.5px;
 
     display: flex;
     align-items: center;
@@ -453,21 +453,21 @@ a {
 
     background-color: #edf6eb;
     border: 1px solid #d7ead4;
-    border-radius: 20px;
+    border-radius: 23.2px;
 
     position: relative;
-    overflow: hidden;       /* a imagem respeita os cantos arredondados */
-    padding-right: 90px;
+    overflow: hidden;           /* a imagem respeita os cantos arredondados */
+    padding-right: 104.4px;
 }
 
 .feedback-flower {
     position: absolute;
     top: 0;
     right: 0;
-    height: 100%;           /* acompanha a altura do card */
-    width: auto;            /* mantém a proporção */
+    height: 100%;               /* acompanha a altura do card */
+    width: auto;                /* mantem a proporcao */
 
-    pointer-events: none;   /* o clique passa direto, não atrapalha o botão */
+    pointer-events: none;       /* o clique passa direto, nao atrapalha o botao */
 }
 
 .feedback-brand {
@@ -498,30 +498,30 @@ a {
 
 .feedback-description {
     flex: 1;
-    max-width: 380px;
+    max-width: 441px;
 }
 
 .feedback-description h2 {
     color: #075b2c;
-    font-size: 15px;
-    margin-bottom: 4px;
+    font-size: 17.4px;
+    margin-bottom: 4.6px;
 }
 
 .feedback-description p {
     color: #6d8a7a;
-    font-size: 11px;
+    font-size: 12.8px;
     line-height: 1.4;
 }
 
 .feedback-benefits {
-    padding-left: 20px;
+    padding-left: 23.2px;
     border-left: 1px solid #c6ddc8;
 }
 
 .feedback-benefits p {
     color: #526c5d;
-    font-size: 11px;
-    margin: 4px 0;
+    font-size: 12.8px;
+    margin: 4.6px 0;
 }
 
 .feedback-button {
@@ -531,18 +531,18 @@ a {
 
     white-space: nowrap;
 
-    padding: 11px 25px;
+    padding: 12.8px 29px;
 
     background-color: #075b2c;
     color: white;
 
     border-radius: 30px;
 
-    font-size: 12px;
+    font-size: 13.9px;
     font-weight: 600;
 
     transition: 0.3s;
-    transform: translateX(60px);
+    transform: translateX(69.6px);
 }
 
 .feedback-button:hover {
@@ -567,7 +567,7 @@ a {
 }
 
 .footer-content {
-    position: absolute;    /* o texto fica por cima da imagem */
+    position: absolute;         /* o texto fica por cima da imagem */
     inset: 0;
     z-index: 1;
 
@@ -576,7 +576,7 @@ a {
     padding: 0 20px;
 
     display: flex;
-    align-items: flex-end;     /* texto na parte de baixo */
+    align-items: flex-end;      /* texto na parte de baixo */
     justify-content: space-between;
     padding-bottom: 27px;
 
@@ -599,8 +599,8 @@ a {
 }
 
 .sector-icon .icon {
-    width: 20px;
-    height: 20px;
+    width: 23.2px;
+    height: 23.2px;
 }
 
 .dropdown-menu .icon {
@@ -610,15 +610,15 @@ a {
 }
 
 .menu .dropdown-menu a {
-    display: flex;              /* ícone e texto lado a lado */
+    display: flex;              /* icone e texto lado a lado */
     align-items: center;
     gap: 10px;
 }
 
 /* ajustes dos novos icones */
 .logo-icon img {
-    height: 32px;       /* teste 28px, 36px, 40px... */
-    width: auto;        /* mantém a proporção original */
+    height: 32px;               /* teste 28px, 36px, 40px... */
+    width: auto;                /* mantem a proporcao original */
     display: block;
     transform: translate(-6px, -2px);   /* (horizontal, vertical) */
 }
@@ -634,42 +634,42 @@ a {
 }
 
 .hero-button .icon {
-    width: 16px;
-    height: 16px;
+    width: 18.6px;
+    height: 18.6px;
 }
 
 .impact-button {
-    gap: 8px;
+    gap: 9.3px;
 }
 
 .impact-button .icon {
-    width: 16px;
-    height: 16px;
+    width: 18.6px;
+    height: 18.6px;
 }
 
 .sector-arrow .icon {
-    width: 14px;
-    height: 14px;
+    width: 16.2px;
+    height: 16.2px;
 }
 
 .feedback-benefits p {
     display: flex;
     align-items: center;
-    gap: 8px;
+    gap: 9.3px;
 }
 
 .feedback-benefits .icon {
-    width: 14px;
-    height: 14px;
+    width: 16.2px;
+    height: 16.2px;
 }
 
 .feedback-button {
-    gap: 8px;
+    gap: 9.3px;
 }
 
 .feedback-button .icon {
-    width: 16px;
-    height: 16px;
+    width: 18.6px;
+    height: 18.6px;
 }
 
 .footer-content span {
@@ -684,8 +684,8 @@ a {
 }
 
 .feedback-brand img {
-    height: 60px;       /* teste 44px, 56px, 64px... */
-    width: auto;        /* mantém a proporção original */
+    height: 69.6px;               /* teste 44px, 56px, 64px... */
+    width: auto;                /* mantem a proporcao original */
     display: block;
 }
 
@@ -750,17 +750,17 @@ a {
         flex-direction: column;
         align-items: center;
         padding: 20px;
-        text-align: center; 
-        gap: 25px;  
+        text-align: center;
+        gap: 25px;
     }
 
     .feedback-brand {
-    justify-content: center;
+        justify-content: center;
     }
 
     .feedback-description {
-    max-width: none;
-    flex: none;
+        max-width: none;
+        flex: none;
     }
 
     .feedback-benefits {
@@ -769,22 +769,22 @@ a {
     }
 
     .feedback-benefits p {
-    justify-content: center;   /* centraliza ícone + texto */
-}
+        justify-content: center;    /* centraliza icone + texto */
+    }
 
     .footer {
         margin-top: 0px;
     }
 
     .feedback-flower {
-    top: 0;
-    right: 0;
-    height: 70px;   /* ajuste: 50px, 60px, 80px... */
-    width: auto;
+        top: 0;
+        right: 0;
+        height: 70px;               /* ajuste: 50px, 60px, 80px... */
+        width: auto;
     }
 
     .feedback-button {
-    transform: none; 
-    align-self: center;
+        transform: none;
+        align-self: center;
     }
 }
