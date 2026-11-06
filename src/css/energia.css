@@ -1,0 +1,796 @@
+/* energia
+   so o que e exclusivo desta pagina; base, header, dropdown, rodape e icones vem do home.css */
+
+
+/* "Setores" marcado como pagina atual no menu */
+
+.dropdown-toggle.active {
+    color: #075b2c;
+    border-bottom: 2px solid #075b2c;
+}
+
+
+/* banner */
+
+.energia-hero {
+    width: 100%;
+    min-height: 340px;
+
+    margin: -96px 0 0;            /* sobe para ficar atras da navbar */
+    padding: 120px 0 56px max(20px, calc((100vw - 1280px) / 2 + 20px));
+
+    position: relative;
+    overflow: hidden;
+
+    display: flex;
+    align-items: center;
+
+    background: linear-gradient(110deg, #f4f8ef, #f8faf6);
+}
+
+.energia-hero-content {
+    width: 56%;
+    position: relative;
+    z-index: 2;
+
+    display: grid;
+    grid-template-columns: 58px 1fr;
+    column-gap: 22px;
+    align-items: center;
+}
+
+.energia-hero-bg {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+}
+
+.energia-hero-bg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: right center;
+    display: block;
+}
+
+.energia-hero-icon {
+    width: 58px;
+    height: 58px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+    background-color: #f2b640;
+    color: #ffffff;
+}
+
+.energia-hero-icon .icon {
+    width: 28px;
+    height: 28px;
+}
+
+.energia-hero h1 {
+    font-size: clamp(34px, 3.4vw, 50px);
+    line-height: 1.1;
+    font-weight: 600;
+    color: #151515;
+}
+
+.energia-hero-subtitulo {
+    grid-column: 2;
+
+    margin: 2px 0 20px;
+
+    font-size: 18px;
+    letter-spacing: 1px;
+    color: #5b7a62;
+}
+
+.energia-hero p {
+    grid-column: 2;
+    max-width: 560px;
+
+    font-size: 15px;
+    line-height: 1.55;
+    color: #4a5a60;
+}
+
+
+/* layout em duas colunas */
+
+.energia-layout {
+    width: 100%;
+    max-width: 1280px;
+    margin: 18px auto 0;
+    padding: 0 20px;
+
+    display: grid;
+    grid-template-columns: minmax(0, 2.15fr) minmax(0, 1fr);
+    gap: 24px;
+    align-items: start;
+}
+
+.en-principal,
+.en-lateral {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.en-card {
+    background-color: #ffffff;
+    border: 1px solid #e5ede2;
+    border-radius: 16px;
+}
+
+/* abas (links para as secoes da pagina) */
+
+.en-abas {
+    display: flex;
+    gap: 44px;
+    padding-left: 4px;
+}
+
+.en-abas a {
+    padding: 8px 0 10px;
+
+    border-bottom: 3px solid transparent;
+
+    font-size: 15px;
+    color: #5b6d6a;
+
+    transition: 0.3s;
+}
+
+.en-abas a:hover,
+.en-abas a.ativa {
+    color: #2f6b43;
+}
+
+.en-abas a.ativa {
+    border-bottom-color: #2f6b43;
+    font-weight: 600;
+}
+
+#visao-geral,
+#como-reduzir,
+#fontes {
+    scroll-margin-top: 20px;
+}
+
+
+/* o impacto do setor */
+
+.en-impacto-setor {
+    padding: 22px 24px;
+
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 270px;
+    gap: 28px;
+    align-items: start;
+}
+
+.en-titulo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    margin-bottom: 10px;
+}
+
+.en-titulo-icon {
+    width: 36px;
+    height: 36px;
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+    background-color: #2f7a4b;
+    color: #ffffff;
+}
+
+.en-titulo-icon .icon {
+    width: 20px;
+    height: 20px;
+}
+
+.en-impacto-setor h2 {
+    font-size: 23px;
+    font-weight: 500;
+    color: #1d1d1d;
+}
+
+.en-impacto-setor-texto p {
+    font-size: 14px;
+    line-height: 1.5;
+    color: #5b6d6a;
+}
+
+.en-destaque {
+    padding: 18px 20px;
+
+    background-color: #eef5ec;
+    border: 1px solid #dce9d8;
+    border-radius: 14px;
+}
+
+.en-destaque h3 {
+    font-size: 21px;
+    font-weight: 500;
+    color: #2f6b43;
+
+    margin-bottom: 8px;
+}
+
+.en-destaque p {
+    font-size: 13px;
+    line-height: 1.5;
+    color: #5b6d6a;
+
+    margin-bottom: 14px;
+}
+
+.en-destaque small {
+    font-size: 13px;
+    color: #5b6d6a;
+}
+
+
+/* dados do setor */
+
+.en-dados-setor {
+    padding: 20px 24px 24px;
+}
+
+.en-titulo-verde {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    font-size: 21px;
+    font-weight: 500;
+    color: #2f6b43;
+
+    margin-bottom: 16px;
+}
+
+.en-titulo-verde .icon {
+    width: 28px;
+    height: 28px;
+}
+
+.en-dados {
+    list-style: none;
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 14px;
+}
+
+.en-dado {
+    padding: 14px 16px;
+
+    border: 1px solid;
+    border-radius: 12px;
+}
+
+.en-dado-topo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    margin-bottom: 8px;
+}
+
+.en-dado-icon {
+    width: 28px;
+    height: 28px;
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+    color: #ffffff;
+}
+
+.en-dado-icon .icon {
+    width: 15px;
+    height: 15px;
+}
+
+.en-dado strong {
+    font-size: 21px;
+    color: #151515;
+}
+
+.en-dado p {
+    font-size: 12px;
+    line-height: 1.4;
+    color: #6d7f78;
+
+    margin-bottom: 8px;
+}
+
+.en-dado small {
+    font-size: 10px;
+    color: #8a9a94;
+}
+
+.en-dado.verde   { background: #eef5ec; border-color: #d7e8d3; }
+.en-dado.azul    { background: #eaf2fd; border-color: #cfdff7; }
+.en-dado.roxo    { background: #f1ecfb; border-color: #ddd0f3; }
+.en-dado.laranja { background: #fdf5e8; border-color: #f3dfae; }
+
+.en-dado.verde   .en-dado-icon { background: #8fc39b; }
+.en-dado.azul    .en-dado-icon { background: #5b9bf0; }
+.en-dado.roxo    .en-dado-icon { background: #9b6fe0; }
+.en-dado.laranja .en-dado-icon { background: #f4c26a; }
+
+/* "CO2" desenhado com texto, ja que nao existe icone para ele */
+.en-co2 {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: -0.3px;
+    line-height: 1;
+}
+
+.en-co2 sub {
+    font-size: 7px;
+    vertical-align: baseline;
+    position: relative;
+    top: 2px;
+}
+
+
+/* o que podemos fazer */
+
+.en-fazer {
+    padding: 16px 24px;
+
+    display: flex;
+    align-items: center;
+    gap: 16px;
+
+    background-color: #f1f7ef;
+    border: 1px solid #e0ebdd;
+    border-radius: 16px;
+}
+
+.en-fazer-icon {
+    width: 46px;
+    height: 46px;
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+    background-color: #e1ede0;
+    color: #3f8a55;
+}
+
+.en-fazer-icon .icon {
+    width: 24px;
+    height: 24px;
+}
+
+.en-fazer-texto {
+    flex: 1;
+}
+
+.en-fazer h2 {
+    font-size: 19px;
+    font-weight: 500;
+    color: #2f6b43;
+
+    margin-bottom: 4px;
+}
+
+.en-fazer-texto p {
+    font-size: 12.5px;
+    line-height: 1.5;
+    color: #6d7f78;
+}
+
+.en-botao {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+
+    flex-shrink: 0;
+    white-space: nowrap;
+
+    padding: 13px 28px;
+
+    border-radius: 30px;
+    background-color: #1f5c36;
+    color: #ffffff;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    transition: 0.3s;
+}
+
+.en-botao .icon {
+    width: 18px;
+    height: 18px;
+}
+
+.en-botao:hover {
+    background-color: #2f7a4b;
+}
+
+
+/* principais impactos */
+
+.en-impactos {
+    padding: 22px 24px;
+
+    background-color: #f1f7ef;
+    border-color: #e0ebdd;
+}
+
+.en-impactos h2 {
+    font-size: 21px;
+    font-weight: 500;
+    color: #2f6b43;
+
+    margin-bottom: 12px;
+}
+
+.en-impactos ul {
+    list-style: none;
+}
+
+.en-impacto {
+    padding: 10px 0;
+
+    display: grid;
+    grid-template-columns: 40px 1fr;
+    align-items: center;
+    gap: 14px;
+}
+
+.en-impacto-icon {
+    width: 40px;
+    height: 40px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+    background-color: #2f7a4b;
+    color: #ffffff;
+}
+
+.en-impacto-icon .icon {
+    width: 19px;
+    height: 19px;
+}
+
+.en-impacto-icon .en-co2 {
+    font-size: 11px;
+}
+
+.en-impacto-icon .en-co2 sub {
+    font-size: 8px;
+}
+
+.en-impacto h3 {
+    font-size: 15px;
+    font-weight: 500;
+    color: #222222;
+
+    margin-bottom: 2px;
+}
+
+.en-impacto p {
+    font-size: 12px;
+    line-height: 1.4;
+    color: #7b8b97;
+}
+
+
+/* voce sabia */
+
+.en-sabia {
+    padding: 20px 24px;
+
+    position: relative;
+    overflow: hidden;
+
+    background-color: #f1f7ef;
+    border-color: #e0ebdd;
+}
+
+.en-sabia-topo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    margin-bottom: 10px;
+}
+
+.en-sabia-icon {
+    width: 28px;
+    height: 28px;
+    color: #3f8a55;
+}
+
+.en-sabia h2 {
+    font-size: 22px;
+    font-weight: 500;
+    color: #2f6b43;
+}
+
+.en-sabia p {
+    max-width: 70%;
+
+    font-size: 13px;
+    line-height: 1.5;
+    color: #5b6d6a;
+}
+
+.en-sabia-decoracao {
+    position: absolute;
+    right: 14px;
+    bottom: 12px;
+
+    width: 64px;
+    height: 64px;
+
+    color: #4c9a5a;
+    opacity: 0.22;
+    pointer-events: none;
+}
+
+
+/* secoes "como reduzir" e "fontes" (abaixo da visao geral) */
+
+.en-secao {
+    padding: 22px 24px 24px;
+}
+
+.en-secao h2 {
+    font-size: 23px;
+    font-weight: 500;
+    color: #1d1d1d;
+}
+
+.en-secao-intro {
+    font-size: 14px;
+    line-height: 1.5;
+    color: #5b6d6a;
+
+    margin-bottom: 18px;
+}
+
+/* dicas */
+
+.en-dicas {
+    list-style: none;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+}
+
+.en-dica {
+    padding: 16px;
+
+    display: grid;
+    grid-template-columns: 40px 1fr;
+    align-items: start;
+    gap: 14px;
+
+    background-color: #f1f7ef;
+    border: 1px solid #e0ebdd;
+    border-radius: 14px;
+}
+
+.en-dica-icon {
+    width: 40px;
+    height: 40px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+    background-color: #2f7a4b;
+    color: #ffffff;
+}
+
+.en-dica-icon .icon {
+    width: 19px;
+    height: 19px;
+}
+
+.en-dica h3 {
+    font-size: 15px;
+    font-weight: 500;
+    color: #222222;
+
+    margin-bottom: 4px;
+}
+
+.en-dica p {
+    font-size: 12.5px;
+    line-height: 1.5;
+    color: #6d7f78;
+}
+
+/* referencias numeradas */
+
+.en-referencias {
+    list-style: none;
+    counter-reset: ref;
+
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.en-referencias li {
+    counter-increment: ref;
+    position: relative;
+
+    padding: 12px 16px 12px 52px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+
+    background-color: #f7faf6;
+    border: 1px solid #e5ede2;
+    border-radius: 12px;
+}
+
+.en-referencias li::before {
+    content: counter(ref);
+
+    position: absolute;
+    left: 16px;
+    top: 12px;
+
+    width: 24px;
+    height: 24px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+    background-color: #2f7a4b;
+    color: #ffffff;
+
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.en-referencias strong {
+    font-size: 14px;
+    font-weight: 500;
+    color: #222222;
+}
+
+.en-referencias span {
+    font-size: 12.5px;
+    color: #6d7f78;
+}
+
+.en-referencias a {
+    color: #2f7a4b;
+    text-decoration: underline;
+}
+
+
+/* card lateral "fontes e referencias" (link que rola ate a secao Fontes) */
+
+.en-fontes {
+    padding: 18px 24px;
+
+    display: grid;
+    grid-template-columns: 26px 1fr 20px;
+    align-items: center;
+    gap: 14px;
+
+    background-color: #f7faf6;
+    transition: 0.3s;
+}
+
+.en-fontes:hover {
+    background-color: #eef5ec;
+}
+
+.en-fontes-icon {
+    width: 26px;
+    height: 26px;
+    color: #2f6b43;
+}
+
+.en-fontes h3 {
+    font-size: 17px;
+    font-weight: 500;
+    color: #2c4a39;
+
+    margin-bottom: 3px;
+}
+
+.en-fontes p {
+    font-size: 12px;
+    color: #7b8b97;
+}
+
+.en-fontes-seta {
+    width: 18px;
+    height: 18px;
+    color: #5b6d6a;
+}
+
+
+/* responsividade */
+
+@media (max-width: 1024px) {
+    .energia-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .en-dados {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .energia-hero {
+        margin-top: 0;
+        padding: 40px 20px;
+        min-height: 0;
+    }
+
+    .energia-hero-content {
+        width: 100%;
+    }
+
+    .energia-hero-bg {
+        opacity: 0.35;      /* o texto continua legivel por cima da imagem */
+    }
+
+    .en-abas {
+        gap: 24px;
+        overflow-x: auto;
+    }
+
+    .en-impacto-setor {
+        grid-template-columns: 1fr;
+    }
+
+    .en-fazer {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .en-dicas {
+        grid-template-columns: 1fr;
+    }
+
+    .en-sabia p {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .en-dados {
+        grid-template-columns: 1fr;
+    }
+}
