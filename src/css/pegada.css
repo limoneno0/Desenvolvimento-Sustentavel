@@ -1,5 +1,4 @@
-/* pegada ecologica
-   so o que e exclusivo desta pagina; base, header, dropdown, rodape e icones vem do home.css */
+/* so o que e exclusivo desta pagina.base, header, dropdown, rodape e icones vem do home.css */
 
 
 /* banner */
@@ -8,7 +7,7 @@
     width: 100%;
     min-height: 340px;
 
-    margin: -96px 0 0;            /* sobe para ficar atras da navbar */
+    margin: -96px 0 0;            
     padding: 120px 0 56px max(20px, calc((100vw - 1280px) / 2 + 20px));
 
     position: relative;
@@ -272,7 +271,7 @@
 }
 
 .pg-planetas-imgs img:nth-child(2) {
-    height: 60px;       /* teste 58px, 62px, 66px... */
+    height: 60px;       
 }
 
 .pg-numeros-planetas strong {
@@ -513,7 +512,7 @@
     }
 
     .pegada-hero-bg {
-        opacity: 0.35;      /* o texto continua legivel por cima da imagem */
+        opacity: 0.35;      
     }
 
     .pg-categorias,

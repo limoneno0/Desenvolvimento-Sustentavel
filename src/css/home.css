@@ -178,11 +178,10 @@ a {
 
 .hero {
     width: 100%;
-    max-width: none;              /* banner de ponta a ponta da tela */
+    max-width: none;              
     min-height: 50px;
 
-    margin: -96px 0 0;            /* sobe para ficar atras da navbar */
-    /* alinha o texto com a grade de setores */
+    margin: -96px 0 0;            
     padding: 110px 0 23.2px max(5%, calc((100vw - 1280px) / 2 + 20px));
 
     position: relative;
@@ -191,7 +190,7 @@ a {
     display: flex;
     align-items: center;
 
-    background: linear-gradient(110deg, #f4f8ef, #f8faf6); /* so aparece se a imagem tiver transparencia */
+    background: linear-gradient(110deg, #f4f8ef, #f8faf6); 
     border-radius: 0;
 }
 
@@ -439,11 +438,11 @@ a {
 /* avaliacoes e sugestoes */
 
 .feedback {
-    width: calc(100% - 40px);   /* 20px de recuo de cada lado, igual ao .sectors */
+    width: calc(100% - 40px);   
     max-width: 1240px;
     min-height: 104.4px;
 
-    margin: 24px auto 0;        /* sem margem embaixo, o rodape sobe por tras do card */
+    margin: 24px auto 0;        
     padding: 18.6px 32.5px;
 
     display: flex;
@@ -456,7 +455,7 @@ a {
     border-radius: 23.2px;
 
     position: relative;
-    overflow: hidden;           /* a imagem respeita os cantos arredondados */
+    overflow: hidden;           
     padding-right: 104.4px;
 }
 
@@ -610,21 +609,21 @@ a {
 }
 
 .menu .dropdown-menu a {
-    display: flex;              /* icone e texto lado a lado */
+    display: flex;              
     align-items: center;
     gap: 10px;
 }
 
 /* ajustes dos novos icones */
 .logo-icon img {
-    height: 32px;               /* teste 28px, 36px, 40px... */
-    width: auto;                /* mantem a proporcao original */
+    height: 32px;               
+    width: auto;                
     display: block;
-    transform: translate(-6px, -2px);   /* (horizontal, vertical) */
+    transform: translate(-6px, -2px);  
 }
 
 .logo-icon {
-    display: flex;              /* icone com 28px, herdando o verde da logo */
+    display: flex;              
 }
 
 .dropdown-arrow .icon {
@@ -684,8 +683,8 @@ a {
 }
 
 .feedback-brand img {
-    height: 69.6px;               /* teste 44px, 56px, 64px... */
-    width: auto;                /* mantem a proporcao original */
+    height: 69.6px;               
+    width: auto;                
     display: block;
 }
 
@@ -769,7 +768,7 @@ a {
     }
 
     .feedback-benefits p {
-        justify-content: center;    /* centraliza icone + texto */
+        justify-content: center;   
     }
 
     .footer {
@@ -779,7 +778,7 @@ a {
     .feedback-flower {
         top: 0;
         right: 0;
-        height: 70px;               /* ajuste: 50px, 60px, 80px... */
+        height: 70px;               
         width: auto;
     }
 

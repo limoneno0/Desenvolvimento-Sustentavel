@@ -1,8 +1,7 @@
-/* energia
-   so o que e exclusivo desta pagina; base, header, dropdown, rodape e icones vem do home.css */
+/* so o que e exclusivo dessa pagina. base, header, dropdown, rodape e icones vem do home.css */
 
 
-/* "Setores" marcado como pagina atual no menu */
+/* "setores" marcado como pagina atual no menu */
 
 .dropdown-toggle.active {
     color: #075b2c;
@@ -351,7 +350,7 @@
 .en-dado.roxo    .en-dado-icon { background: #9b6fe0; }
 .en-dado.laranja .en-dado-icon { background: #f4c26a; }
 
-/* "CO2" desenhado com texto, ja que nao existe icone para ele */
+/* CO2 desenhado com texto pq nao existe icone para ele */
 .en-co2 {
     font-size: 10px;
     font-weight: 700;
@@ -573,7 +572,7 @@
 }
 
 
-/* secoes "como reduzir" e "fontes" (abaixo da visao geral) */
+/* secoes como reduzir e fontes */
 
 .en-secao {
     padding: 22px 24px 24px;
@@ -713,7 +712,7 @@
 }
 
 
-/* card lateral "fontes e referencias" (link que rola ate a secao Fontes) */
+/* card lateral fontes e referencia */
 
 .en-fontes {
     padding: 18px 24px;
