@@ -125,7 +125,33 @@
     border-radius: 16px;
 }
 
-/* abas (links para as secoes da pagina) */
+/* paineis: so o da aba escolhida aparece (o energia.js troca) */
+
+.en-painel {
+    display: none;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.en-painel.ativo {
+    display: flex;
+}
+
+/* fora da visao geral nao ha coluna lateral e o conteudo ocupa a largura toda */
+.energia-layout.sem-lateral {
+    grid-template-columns: 1fr;
+}
+
+.energia-layout.sem-lateral .en-lateral {
+    display: none;
+}
+
+.energia-layout.sem-lateral .en-dicas {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+
+/* abas (trocam o conteudo da pagina) */
 
 .en-abas {
     display: flex;
@@ -153,14 +179,6 @@
     border-bottom-color: #2f6b43;
     font-weight: 600;
 }
-
-#visao-geral,
-#como-reduzir,
-#fontes {
-    scroll-margin-top: 20px;
-}
-
-
 /* o impacto do setor */
 
 .en-impacto-setor {
@@ -749,6 +767,10 @@
     .en-dados {
         grid-template-columns: repeat(2, 1fr);
     }
+
+    .energia-layout.sem-lateral .en-dicas {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
 @media (max-width: 768px) {
@@ -780,7 +802,8 @@
         align-items: flex-start;
     }
 
-    .en-dicas {
+    .en-dicas,
+    .energia-layout.sem-lateral .en-dicas {
         grid-template-columns: 1fr;
     }
 

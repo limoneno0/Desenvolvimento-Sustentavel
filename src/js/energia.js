@@ -1,24 +1,45 @@
-// abas da pagina de energia: destacam a secao que esta na tela
-// (o clique rola ate a secao pelo proprio link, com a rolagem suave do home.css)
+// abas da pagina de energia: cada aba mostra so o seu painel (sem recarregar a pagina)
 
 const abas = document.querySelectorAll('.en-abas a');
-const secoes = Array.from(abas).map(a => document.querySelector(a.getAttribute('href')));
+const paineis = document.querySelectorAll('.en-painel');
+const layout = document.querySelector('.energia-layout');
 
-function atualizarAbas() {
-    const fimDaPagina =
-        window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 2;
+const ids = Array.from(abas).map(aba => aba.getAttribute('href').slice(1));
 
-    let atual = 0;
+function mostrar(id) {
+    if (!ids.includes(id)) id = ids[0];                    // endereco desconhecido: visao geral
 
-    secoes.forEach((secao, i) => {
-        if (secao && secao.getBoundingClientRect().top <= 140) atual = i;
+    abas.forEach(aba => {
+        aba.classList.toggle('ativa', aba.getAttribute('href') === '#' + id);
     });
 
-    // secoes curtas no fim da pagina nunca chegam ao topo: no fim, a ultima aba fica ativa
-    if (fimDaPagina) atual = secoes.length - 1;
+    paineis.forEach(painel => {
+        painel.classList.toggle('ativo', painel.id === id);
+    });
 
-    abas.forEach((aba, i) => aba.classList.toggle('ativa', i === atual));
+    // a coluna lateral so aparece na visao geral
+    layout.classList.toggle('sem-lateral', id !== ids[0]);
 }
 
-window.addEventListener('scroll', atualizarAbas, { passive: true });
-atualizarAbas();
+// qualquer link da pagina que aponte para uma aba:
+// as abas, o botao "Ver dicas praticas" e o card lateral de fontes
+document.querySelectorAll('a[href^="#"]').forEach(link => {
+    const id = link.getAttribute('href').slice(1);
+    if (!ids.includes(id)) return;
+
+    link.addEventListener('click', evento => {
+        evento.preventDefault();
+        mostrar(id);
+        history.replaceState(null, '', '#' + id);
+
+        // se o clique veio de mais abaixo na pagina, volta ate as abas
+        const topo = document.querySelector('.en-abas').getBoundingClientRect().top;
+        if (topo < 0) {
+            window.scrollTo({ top: window.scrollY + topo - 20, behavior: 'smooth' });
+        }
+    });
+});
+
+// abre direto na aba do endereco (energia.html#fontes) e acompanha voltar/avancar
+window.addEventListener('hashchange', () => mostrar(location.hash.slice(1)));
+mostrar(location.hash.slice(1));
