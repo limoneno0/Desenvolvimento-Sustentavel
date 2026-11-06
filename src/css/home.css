@@ -568,7 +568,7 @@ a {
 .footer-content {
     position: absolute;         /* o texto fica por cima da imagem */
     inset: 0;
-    z-index: 1;
+    z-index: 0;
 
     max-width: 1280px;
     margin: 0 auto;
